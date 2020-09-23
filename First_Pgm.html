@@ -1,0 +1,139 @@
+<!--Javascript calculator to perform
+SUM, MUL, DIV, ADD
+-->
+<!DOCTYPE html>
+<html>
+<head><title>Lab Pgm 1</title>
+    <style>
+        body{
+            background-color:lightblue;
+        }
+        table{
+            background-color: lightseagreen;
+        }
+         .title{
+             border-radius: 5px;
+             margin-top: 10%;
+              margin-bottom:5px;
+             text-align: center;
+             width: 250px;
+             color: white;
+             background: rgb(0,212,255);
+             border:solid black 1px;
+         }
+         input[type="text"]{
+             border-radius: 5px;
+             text-align: right;
+             background-color: white;
+             width: 94%;
+         }
+        input[type="button"]{
+            width: 50px;
+            border-radius: 25px;
+            background-color:#340979;
+            color: white;
+            border-color:rgb(0,212,255);
+            
+        }
+        .usn{
+            border-radius: 5px;
+            margin-top: 5px;
+             text-align: center;
+             width: 250px;
+             color: white;
+             background: rgb(0,212,255);
+             border:solid black 1px;  
+        }
+        
+    </style>
+    <script>
+          function disp(val){
+              document.getElementById('sdm').value+=val;
+
+          }
+          function clr(){
+              document.getElementById('sdm').value=" ";
+          }
+
+          function solve(){
+             let x= document.getElementById('sdm').value;
+             let y=eval(x);
+             document.getElementById("sdm").value=y
+          }
+    </script>
+</head>
+<body>
+  <center><div class="title"><center>FIRST LAB PROGRAM</center></div></center>
+<!--Ceating  a table-->
+<center>
+ <table border="20">
+    <tr>
+        <td>
+            <input type="button" value="CE" onclick="clr()">
+        </td>
+        <td colspan="3">
+            <input type="text" id="sdm">
+        </td>
+    </tr>
+    <!-- creating buttons and assign values to it-->
+    <tr>
+        <td>
+            <input type="button" value="+" onclick="disp('+')">
+        </td>
+        <td>
+            <input type="button" value="1" onclick="disp('1')" >
+        </td>
+        <td>
+            <input type="button" value="2" onclick="disp('2')">
+        </td>
+        <td>
+            <input type="button" value="3" onclick="disp('3')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="-" onclick="disp('-')">
+        </td>
+        <td>
+            <input type="button" value="4" onclick="disp('4')">
+        </td>
+        <td>
+            <input type="button" value="5" onclick="disp('5')">
+        </td>
+        <td>
+            <input type="button" value="6" onclick="disp('6')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="*" onclick="disp('*')">
+        </td>
+        <td>
+            <input type="button" value="7" onclick="disp('7')">
+        </td>
+        <td>
+            <input type="button" value="8"onclick="disp('8')">
+        </td>
+        <td>
+            <input type="button" value="9" onclick="disp('9')">
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="/" onclick="disp('/')">
+        </td>
+        <td>
+            <input type="button" value="." onclick="disp('.')">
+        </td>
+        <td>
+            <input type="button" value="0" onclick="disp('0')">
+        </td>
+        <td>
+            <input type="button" value="=" onclick="solve()"  >
+        </td>
+    </tr>
+ </table>
+</center>
+<center><div class="usn"><center>By 4su17cs073</center></div></center>
+</body>
+</html>
